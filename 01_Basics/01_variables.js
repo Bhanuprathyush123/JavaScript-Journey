@@ -14,5 +14,7 @@ console.log("CitlyName:",city," Email:",accountemail," Id:",accountId)
 accountemail = "send@mail.com"
 
 console.table([accountId, accountPassword, accountemail, city])
-// => console.table -> is function that takes all values as a arrya and prints out as a table 
-// it's easy way if you want to print all the varibales and their values as a table . 
+// => console.table -> is function that takes all values as a arrya and prints out as a table
+// it's easy way if you want to print all the varibales and their values as a table .
+
+// Note => Don't use var because of it's cons
