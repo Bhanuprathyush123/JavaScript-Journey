@@ -12,3 +12,7 @@ console.log("CitlyName:",city," Email:",accountemail," Id:",accountId)
   // => console.log() -> is a Function that prints the Parameters that are given 
   // in the open "(" and closing ")" brackets.as You seen above
 accountemail = "send@mail.com"
+
+console.table([accountId, accountPassword, accountemail, city])
+// => console.table -> is function that takes all values as a arrya and prints out as a table 
+// it's easy way if you want to print all the varibales and their values as a table . 
