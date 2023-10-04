@@ -25,7 +25,7 @@ console.log(null != 0); // O/P => true
 
 
 // Part 03
-console.log(2 == 2); // O/p => true
+console.log("2" == 2); // O/p => true
 console.log("2" === 2); // O/p => flase
 
 /* 
