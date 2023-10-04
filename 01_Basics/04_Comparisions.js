@@ -42,4 +42,5 @@ Part 01 is the thing we all know
      Now the difference b/w == & === 
      == -> Only checks the number 
      === -> Checks both number and datatype of the value too.
+Note => Never Do convertions such as shown in Part 2 and Part 3`
 */
