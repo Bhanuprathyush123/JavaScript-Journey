@@ -34,6 +34,6 @@ let userData = {
 
 let newFun = function () {
      console.log("Funtion");
-}//Functions
+}//Functions can be said as Funtion Object
 
 console.log(newFun);
