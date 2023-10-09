@@ -41,4 +41,4 @@ const { courseInstructor:instructor,courseName,price } = JsCourse
 
 console.log(instructor, courseName, price);
 
-let myGitApi = 'https://api.github.com/users/Bhanuprathyush123'
+// let myGitApi = 'https://api.github.com/users/{userName}'
