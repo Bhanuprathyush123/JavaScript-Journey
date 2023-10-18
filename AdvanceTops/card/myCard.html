@@ -14,13 +14,15 @@
                display: flex;
                justify-content: center;
                align-items: center;
+               font-family: cursive;
+               font-weight: 200;
           }
           #card{
                display: flex;
                justify-content: center;
                align-items: center;
                flex-direction: column;
-               gap : 20px;
+               gap : 5px;
                padding: 50px;
           }
           #img{
@@ -44,7 +46,13 @@
           <div id="img">
                <img id="userImage" src="" alt="">
           </div>
-          <div id="userName"></div>
+          <div id="userName">
+               <!-- userName : -->
+          </div>
+          <div id="followers">
+          </div>
+          <div id="following"></div>
+          <div id="twitter_username"></div>
      </div>
 </body>
      <script>
@@ -71,12 +79,22 @@
 
           // Assuming userName is an element where you want to display the username
                let userName = document.getElementById('userName');
-               userName.innerHTML = data.login;
+               //userName.createElement('p')
+               userName.innerHTML = `UserName : ${data.login}`;
+               // Followers
+               let followers = document.getElementById('followers')
+               followers.innerHTML = `Followers : ${data.followers}`;
                // Assuming userImg is an img tag
-               // let userImg = document.getElementById('userImg');
                let userImage = document.querySelector('img')
                userImage.src = data.avatar_url;
-               }
+
+               // following
+               let following = document.getElementById('following')
+               following.innerHTML = `Following : ${data.following}`
+
+               let twitter_username = document.getElementById('twitter_username')
+               twitter_username.innerHTML = `Twitter : ${data.twitter_username}`
+                }
           };
 
 urlRequest.send();
