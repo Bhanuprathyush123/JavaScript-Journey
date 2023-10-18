@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>My GitHub Card</title>
+     <style>
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+          body{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+          #card{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+               gap : 20px;
+               padding: 50px;
+          }
+          #img{
+               width: 200px;
+               height: 200px;
+               border: 1px solid black;
+               border-radius: 20px;
+               background-color: #212121;
+          }
+          #userImage{
+               width: 200px;
+               height: 200px;
+               padding: 10px;
+               border-radius: 20px;
+          }
+     </style>
+</head>
+<body style="background-color: #212121;">
+     <!-- url => https://api.github.com/users/Bhanuprathyush123 -->
+     <div id="card">
+          <div id="img">
+               <img id="userImage" src="" alt="">
+          </div>
+          <div id="userName"></div>
+     </div>
+</body>
+     <script>
+           let card = document.querySelector('#card')
+          //  let userImg = document.getElementById('img')
+          //  let userName = document.getElementById('userName')
+          card.style.width = '350px'
+          card.style.height = '400px'
+          card.style.backgroundColor = 'white'
+          card.style.marginTop = '10%'
+
+          // userImage 
+          
+          // userImg.style.backgroundColor = 'black'
+          let url = 'https://api.github.com/users/Bhanuprathyush123';
+          let urlRequest = new XMLHttpRequest();
+
+          urlRequest.open('GET', url);
+
+          urlRequest.onreadystatechange = function () {
+               if (urlRequest.readyState === 4) {
+               let data = JSON.parse(urlRequest.responseText);
+               console.log(data);
+
+          // Assuming userName is an element where you want to display the username
+               let userName = document.getElementById('userName');
+               userName.innerHTML = data.login;
+               // Assuming userImg is an img tag
+               // let userImg = document.getElementById('userImg');
+               let userImage = document.querySelector('img')
+               userImage.src = data.avatar_url;
+               }
+          };
+
+urlRequest.send();
+
+     </script>
+</html>
