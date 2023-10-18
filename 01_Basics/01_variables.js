@@ -1,5 +1,5 @@
 const accountId = 191101
-// => const a DT where You once you Initialize the value you can't 
+// => const a DT where  once you Initialize the value you can't 
 // Reinitialize and You cna't use the Variable Name again.
 
 let accountemail = "prap12r@gmai.com"
